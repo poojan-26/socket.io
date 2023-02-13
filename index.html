@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Hello world</title>
+   </head>
+   <script src = "/socket.io/socket.io.js"></script>
+   
+   <script>
+      var socket = io();
+      socket.on('message', function(data){document.write(data)})//this is built -in event message event
+    // socket.on('testerEvent', function(data){document.write(data.description)})//this is custom event named testerEvent
+    // socket.emit('clientEvent', 'Sent an event from the client!'); // this is event from client side
+
+    // socket.on('broadcast',function(data) {
+    //      document.body.innerHTML = '';
+    //      document.write(data.description);
+    //   });//it is use to see how many user connected and got all user how many user connected
+
+    // socket.on('newclientconnect',function(data) {
+    //      document.body.innerHTML = '';
+    //      document.write(data.description);
+    //   });// it give only first person information that how many user connected other get hey, welcome msg
+
+    /*********************** here we use custom namespace ************************* */
+    // var socket = io('/my-namespace');
+    //   socket.on('hi',function(data) {
+    //      document.body.innerHTML = '';
+    //      document.write(data);// here hi is event
+    //   });
+   
+//     var socket = io('/my-namespace');
+// socket.on('hi',function(data) {
+//      document.body.innerHTML = '';
+//      document.write(data);
+// });
+
+// var socket = io();
+//       socket.on('connectToRoom',function(data) {
+//          document.body.innerHTML = '';
+//          document.write(data);
+//       });
+
+    
+
+   </script>
+   <body>Hello world</body>
+</html>
